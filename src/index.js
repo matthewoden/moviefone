@@ -78,7 +78,7 @@ export default class MovieFone {
       return {
         morepages: false,
         movies: [],
-        error: new Error('No movie results were found on this page. Please adjust your request and try again.');
+        error: 'No movie results were found on this page. Please adjust your request and try again.'
       };
     }
 

@@ -16,6 +16,11 @@ module.exports = {
     { test: /\.json$/, loader: 'json' }]
   },
   modulesDirectories: ['node_modules'],
+  externals:{
+            'qs': true,
+            'axios': true,
+            'cheerio': true
+            },
   output: {
     path: './',
     filename: 'index.js',
