@@ -1,14 +1,17 @@
 # MovieFone (npm)
 
-Provides a Google Movies API for new releases around a location. Based heavily on [showtimes](https://github.com/jonursenbach/showtimes), but returns a movie-first response, rather than theater-first.
+This module provides a Google Movies API for new releases around a location, returning a list of movies complete with theaters and showtimes. It's not using an official API, so it may be subject to break at any time.
+
+## About
+This is heavily inspired by the npm module[showtimes](https://github.com/jonursenbach/showtimes). I really liked what Jon put together, just not the format of the response. I'm not loyal to any particular theater, so I rearranged the response to be movie-first, instead of theater-first.
 
 ## Installation
-
 ```
 npm install moviefone
 ```
 
 ## API
+There's not a lot to MovieFone:
 
 ### MovieFone(location)
 Our constructor. Sets the location for this instance.
@@ -50,8 +53,12 @@ On success, it returns an array of movies names, with dates, times, descriptions
 If the request succeeded, but failed to find any movies, it returns an additional error property.
 
 ```
-
-[ { name: 'Mission: Impossible - Rogue Nation',
+{
+meta: {
+  type:'OK',
+  message:null
+},
+movies: [ { name: 'Mission: Impossible - Rogue Nation',
   cast: [
     'Tom Cruise',
     'Jeremy Renner',
