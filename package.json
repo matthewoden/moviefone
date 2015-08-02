@@ -1,6 +1,6 @@
 {
   "name": "moviefone",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "an API to get google new releases",
   "main": "index.js",
   "scripts": {
